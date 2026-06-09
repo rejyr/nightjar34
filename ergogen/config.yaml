@@ -1,0 +1,176 @@
+meta:
+  engine: 4.1.0
+units:
+  kx: u
+  ky: u
+  px: kx + 2
+  py: ky + 2
+  cx: 18
+  cy: 18
+  staggerScale: 0.6
+points:
+  zones:
+    matrix:
+      anchor.shift: [100,-150]
+      key: 
+        padding: 1ky
+        spread: 1kx
+      columns:
+        pinky: 
+          key:
+            stagger: 0
+            splay: 18
+          rows.top.bind: [0, 8, 0, 0]
+        ring:
+          key:
+            stagger: 11
+            splay: -18
+            origin: [0,-9]
+        middle:
+          key:
+            stagger: 5
+        index:
+          key:
+            stagger: -9
+        inner:
+          key:
+            stagger: -3
+      rows:
+        bottom:
+        home:
+        top:
+    thumbs:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-kx/3, -ky]
+      key:
+        padding: 1ky
+        spread: 1kx
+        origin: [-kx/2, -ky/2]
+      columns:
+        layer:
+          key:
+            splay: 0
+          rows.cluster:
+            bind: [10, 1, 0, 0]
+        space:
+          key:
+            splay: -10
+          rows.cluster:
+            bind: [0, 0, 0, 5]
+      rows:
+        cluster:
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx - 0.5, ky - 0.5]
+  board:
+    - what: polygon
+      operation: stack
+      fillet: 2
+      points: 
+        - ref: matrix_pinky_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_pinky_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_top
+          shift: [0.5px,0.5py]
+        - ref: thumbs_space_cluster
+          shift: [0.5px,0.5py]
+        - ref: thumbs_space_cluster
+          shift: [0.5px,-0.5py]
+        - ref: thumbs_space_cluster
+          shift: [-0.5px,-0.5py]
+        - ref: thumbs_layer_cluster
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_bottom
+          shift: [0.5px,-0.5py]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5px,-0.5py]
+  _board2_shape:
+    - what: rectangle
+      where: true
+      size: [px,py]
+    - what: rectangle
+      where: [thumbs_layer_cluster]
+      size: [1.2px,2py]
+      adjust.shift: [0.1px,1py]
+    - what: rectangle
+      where: [matrix_pinky_top]
+      size: [2px,2py]
+      adjust.shift: [1px,-0.5py]
+  board2:
+    - what: outline
+      name: _board2_shape
+      fillet: 0
+
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+  combo2:
+    - name: board2
+    - operation: subtract
+      name: keys
+pcbs:
+  pcb:
+    template: kicad8
+    outlines.main.outline: board2
+    footprints:
+      mcu:
+        what: xiao-ble
+        where:
+          ref: matrix_pinky_top
+          shift: [2kx,2ky]
+        params:
+          side: "F"
+      choc_v2_hotswap:
+        what: ceoloide/switch_choc_v1_v2
+        where: true 
+        adjust:
+          rotate: 180 
+        params:
+          include_keycap: true 
+          keycap_width: cx
+          keycap_height: cy
+          choc_v1_support: false
+          choc_v2_support: true 
+          reversible: true
+          hotswap: true 
+          include_stabilizer_pad: false
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: ceoloide/diode_tht_sod123
+        where: true 
+        params:
+          reversible: true
+          include_traces_vias: true
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, 4.93]
+      power_switch:
+        what: ceoloide/power_switch_smd_side
+        where:
+          ref: matrix_inner_top
+          shift: [kx, 0ky]
+        params:
+          reversible: true 
+      reset_switch:
+        what: ceoloide/reset_switch_smd_side
+        where:
+          ref: matrix_inner_home
+          shift: [kx, 0ky]
+        params:
+          reversible: true 
+cases:
