@@ -20,18 +20,17 @@ points:
           key:
             stagger: 0
             splay: 18
-          rows.top.bind: [0, 8, 0, 0]
         ring:
           key:
-            stagger: 11
+            stagger: 14
             splay: -18
-            origin: [0,-9]
+            origin: [0,-8]
         middle:
           key:
-            stagger: 5
+            stagger: 6
         index:
           key:
-            stagger: -9
+            stagger: -10
         inner:
           key:
             stagger: -3
@@ -42,7 +41,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-kx/3, -ky]
+        shift: [-kx/3, -ky-2]
       key:
         padding: 1ky
         spread: 1kx
@@ -52,12 +51,9 @@ points:
           key:
             splay: 0
           rows.cluster:
-            bind: [10, 1, 0, 0]
         space:
           key:
             splay: -10
-          rows.cluster:
-            bind: [0, 0, 0, 5]
       rows:
         cluster:
 outlines:
@@ -101,6 +97,10 @@ outlines:
       where: true
       size: [px,py]
     - what: rectangle
+      where: [matrix_inner_bottom]
+      size: [1px,1py]
+      adjust.shift: [0.0px,-0.5py]
+    - what: rectangle
       where: [thumbs_layer_cluster]
       size: [1.2px,2py]
       adjust.shift: [0.1px,1py]
@@ -127,12 +127,14 @@ pcbs:
     outlines.main.outline: board2
     footprints:
       mcu:
-        what: xiao-ble
+        what: mcu_xiao_ble
         where:
-          ref: matrix_pinky_top
-          shift: [2kx,2ky]
+          ref: matrix_middle_top
+          shift: [-2kx-1.5,0ky-6]
+          rotate: 90
         params:
           side: "F"
+          reversible: true
       choc_v2_hotswap:
         what: ceoloide/switch_choc_v1_v2
         where: true 
