@@ -20,24 +20,32 @@ points:
           key:
             stagger: 0
             splay: 18
+            column_net: c0
         ring:
           key:
             stagger: 14
             splay: -18
             origin: [0,-8]
+            column_net: c1
         middle:
           key:
             stagger: 6
+            column_net: c2
         index:
           key:
             stagger: -10
+            column_net: c3
         inner:
           key:
             stagger: -3
+            column_net: c4
       rows:
         bottom:
+          row_net: r2
         home:
+          row_net: r1
         top:
+          row_net: r0
     thumbs:
       anchor:
         ref: matrix_inner_bottom
@@ -50,12 +58,14 @@ points:
         layer:
           key:
             splay: 0
-          rows.cluster:
+            column_net: c3
         space:
           key:
             splay: -10
+            column_net: c4
       rows:
         cluster:
+          row_net: r3
 outlines:
   keys:
     - what: rectangle
@@ -135,6 +145,15 @@ pcbs:
         params:
           side: "F"
           reversible: true
+          P1: r0
+          P3: r1
+          P4: r2
+          P5: r3
+          P6: c0
+          P7: c1
+          P8: c2
+          P9: c3
+          P10: c4
       choc_v2_hotswap:
         what: ceoloide/switch_choc_v1_v2
         where: true 
