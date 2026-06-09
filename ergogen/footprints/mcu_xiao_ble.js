@@ -59,17 +59,18 @@ module.exports = {
         // parts only on front
         const front = `
             ${gen_cuts(false)}
-            ${gen_pads(p, false)}
         `;
 
         // parts only on back
         const back = `
             ${gen_cuts(true)}
-            ${gen_pads(p, true)}
         `;
 
         // parts on both sides with closing parentheses
         const bottom = `
+            ${'' /* HACK: only generate front pads so reversible does not stack and conflict pads */}
+            ${'' /* use local_net and vias like in https://github.com/ceoloide/ergogen-footprints/blob/main/mcu_nice_nano.js */}
+            ${gen_pads(p, false)}
         )
         `;
 
