@@ -72,40 +72,10 @@ outlines:
       where: true
       size: [kx - 0.5, ky - 0.5]
   board:
-    - what: polygon
-      operation: stack
-      fillet: 2
-      points: 
-        - ref: matrix_pinky_top
-          shift: [-0.5px,0.5py]
-        - ref: matrix_pinky_top
-          shift: [0.5px,0.5py]
-        - ref: matrix_ring_top
-          shift: [-0.5px,0.5py]
-        - ref: matrix_middle_top
-          shift: [-0.5px,0.5py]
-        - ref: matrix_middle_top
-          shift: [0.5px,0.5py]
-        - ref: matrix_index_top
-          shift: [0.5px,0.5py]
-        - ref: matrix_inner_top
-          shift: [0.5px,0.5py]
-        - ref: thumbs_space_cluster
-          shift: [0.5px,0.5py]
-        - ref: thumbs_space_cluster
-          shift: [0.5px,-0.5py]
-        - ref: thumbs_space_cluster
-          shift: [-0.5px,-0.5py]
-        - ref: thumbs_layer_cluster
-          shift: [-0.5px,-0.5py]
-        - ref: matrix_pinky_bottom
-          shift: [0.5px,-0.5py]
-        - ref: matrix_pinky_bottom
-          shift: [-0.5px,-0.5py]
-  _board2_shape:
     - what: rectangle
       where: true
       size: [px,py]
+      # connect thumbs
     - what: rectangle
       where: [matrix_inner_bottom]
       size: [1px,1py]
@@ -114,27 +84,24 @@ outlines:
       where: [thumbs_layer_cluster]
       size: [1.2px,2py]
       adjust.shift: [0.1px,1py]
+      # close gap between pinky and ring
     - what: rectangle
       where: [matrix_pinky_top]
       size: [2px,2py]
       adjust.shift: [1px,-0.5py]
-  board2:
-    - what: outline
-      name: _board2_shape
-      fillet: 0
-
+      # space for mcu
+    - what: rectangle
+      where: [matrix_ring_top]
+      size: [1px+10.1*2,2py]
+      adjust.shift: [-0.5px,-0.5py]
   combo:
     - name: board
-    - operation: subtract
-      name: keys
-  combo2:
-    - name: board2
     - operation: subtract
       name: keys
 pcbs:
   pcb:
     template: kicad8
-    outlines.main.outline: board2
+    outlines.main.outline: board
     footprints:
       mcu:
         what: mcu_xiao_ble
@@ -194,4 +161,11 @@ pcbs:
           shift: [kx, 0ky]
         params:
           reversible: true 
+      battery_connector:
+        what: ceoloide/battery_connector_jst_ph_2
+        where:
+          ref: matrix_inner_home
+          shift: [2kx, 0ky]
+        params:
+          reversible: true
 cases:
