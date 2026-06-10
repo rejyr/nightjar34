@@ -22,7 +22,7 @@ points:
             column_net: c0
         ring:
           key:
-            stagger: 14
+            stagger: 16
             splay: -14
             origin: [0,-8.5]
             column_net: c1
@@ -52,7 +52,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-0kx, -ky-2]
+        shift: [-0kx+2, -ky-6]
       key:
         padding: 1ky
         spread: 1kx
@@ -60,11 +60,11 @@ points:
       columns:
         layer:
           key:
-            splay: -15
+            splay: 7
             column_net: c3
         space:
           key:
-            splay: -10
+            splay: -12
             column_net: c4
       rows:
         cluster:
@@ -81,21 +81,21 @@ outlines:
       # connect thumbs
     - what: rectangle
       where: [matrix_inner_bottom]
-      size: [1px,1py]
+      size: [1px,0.6py]
       adjust.shift: [0.0px,-0.5py]
+    - what: rectangle
+      where: [thumbs_layer_cluster]
+      size: [1px,2py]
+      adjust.shift: [0px,0.5py]
     - what: rectangle
       where: [thumbs_space_cluster]
       size: [1.5px,1py]
       adjust.shift: [-0.25px,0py]
-    - what: rectangle
-      where: [thumbs_layer_cluster]
-      size: [4.0px,1.5py]
-      adjust.shift: [-2.0px+1,0.25py]
       # close gap between pinky and ring
     - what: rectangle
       where: [matrix_pinky_top]
-      size: [1.5px,2py]
-      adjust.shift: [0.5px,-0.5py]
+      size: [1.5px,1.6py]
+      adjust.shift: [0.5px,-0.3py]
       # close gap between ring and middle
     - what: rectangle
       where: [matrix_ring_top]
