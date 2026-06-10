@@ -2,6 +2,12 @@
 
 todo: all the docs
 
+# pcb
+# connecting kicad traces
+set `File > Board Setup... > Design Rules > Constraints > Copper to edge clearance:` to `0.25` mm
+
+this removes the `The routing start point violates DRC.` error when routing the xiao ble underside pins
+
 # references
 - [TOTEM keyboard](https://github.com/GEIGEIGEIST/TOTEM)
 - [kiai keyboard](https://github.com/makgyber/kiai-split/tree/main)
