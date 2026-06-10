@@ -10,6 +10,7 @@ this removes the `The routing start point violates DRC.` error when routing the 
 
 # references
 - [TOTEM keyboard](https://github.com/GEIGEIGEIST/TOTEM)
+- [Architeuthis dux](https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux)
 - [kiai keyboard](https://github.com/makgyber/kiai-split/tree/main)
 - [xiao ble resources](https://wiki.seeedstudio.com/XIAO_BLE/#resources)
 - [choc v2 switches guide](https://showcase.beekeeb.com/kailh-choc-v2-key-switches/)

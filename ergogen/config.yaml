@@ -23,16 +23,20 @@ points:
         ring:
           key:
             stagger: 14
-            splay: -18
-            origin: [0,-8]
+            splay: -14
+            origin: [0,-8.5]
             column_net: c1
         middle:
           key:
             stagger: 6
+            splay: -4
+            origin: [0,-10]
             column_net: c2
         index:
           key:
             stagger: -10
+            splay: -6
+            origin: [0,-0]
             column_net: c3
         inner:
           key:
@@ -48,7 +52,7 @@ points:
     thumbs:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-kx/3, -ky-2]
+        shift: [-0kx, -ky-2]
       key:
         padding: 1ky
         spread: 1kx
@@ -56,7 +60,7 @@ points:
       columns:
         layer:
           key:
-            splay: 0
+            splay: -15
             column_net: c3
         space:
           key:
@@ -80,18 +84,27 @@ outlines:
       size: [1px,1py]
       adjust.shift: [0.0px,-0.5py]
     - what: rectangle
+      where: [thumbs_space_cluster]
+      size: [1.5px,1py]
+      adjust.shift: [-0.25px,0py]
+    - what: rectangle
       where: [thumbs_layer_cluster]
-      size: [1.2px,2py]
-      adjust.shift: [0.1px,1py]
+      size: [4.0px,1.5py]
+      adjust.shift: [-2.0px+1,0.25py]
       # close gap between pinky and ring
     - what: rectangle
       where: [matrix_pinky_top]
-      size: [2px,2py]
-      adjust.shift: [1px,-0.5py]
-      # space for mcu
+      size: [1.5px,2py]
+      adjust.shift: [0.5px,-0.5py]
+      # close gap between ring and middle
     - what: rectangle
       where: [matrix_ring_top]
-      size: [1px+10.1*2,2py]
+      size: [1.5px,2py]
+      adjust.shift: [0.5px,-0.5py]
+      # close gap between middle and index
+    - what: rectangle
+      where: [matrix_index_top]
+      size: [1.5px,2py]
       adjust.shift: [-0.5px,-0.5py]
   combo:
     - name: board
@@ -158,13 +171,6 @@ pcbs:
         where:
           ref: matrix_inner_home
           shift: [kx, 0ky]
-        params:
-          reversible: true 
-      battery_connector:
-        what: ceoloide/battery_connector_jst_ph_2
-        where:
-          ref: matrix_inner_home
-          shift: [2kx, 0ky]
         params:
           reversible: true
 cases:
