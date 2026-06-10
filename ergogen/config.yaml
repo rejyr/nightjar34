@@ -7,7 +7,6 @@ units:
   py: ky + 2
   cx: 18
   cy: 18
-  staggerScale: 0.6
 points:
   zones:
     matrix:
