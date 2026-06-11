@@ -80,48 +80,48 @@ outlines:
       size: [px,py]
       # connect thumbs
     - what: rectangle
-      where: [matrix_inner_bottom]
+      where: matrix_inner_bottom
       size: [1px,0.6py]
       adjust.shift: [0.0px,-0.5py]
     - what: rectangle
-      where: [thumbs_layer_cluster]
+      where: thumbs_layer_cluster
       size: [1px,2py]
       adjust.shift: [0px,0.5py]
     - what: rectangle
-      where: [thumbs_space_cluster]
+      where: thumbs_space_cluster
       size: [1.5px,1py]
       adjust.shift: [-0.25px,0py]
       # close gap between pinky and ring
     - what: rectangle
-      where: [matrix_pinky_top]
+      where: matrix_pinky_top
       size: [1.5px,1.6py]
       adjust.shift: [0.5px,-0.3py]
       # close gap between ring and middle
     - what: rectangle
-      where: [matrix_ring_top]
+      where: matrix_ring_top
       size: [1.5px,2py]
       adjust.shift: [0.5px,-0.5py]
       # close gap between middle and index
     - what: rectangle
-      where: [matrix_index_top]
+      where: matrix_index_top
       size: [1.5px,2py]
       adjust.shift: [-0.5px,-0.5py]
       # space for button over inner column
     - what: rectangle
-      where: [matrix_index_top]
+      where: matrix_index_top
       size: [2kx,1py]
       adjust.shift: [0.5px,0py]
       # close palm gap
     - what: polygon
       operation: add
       points:
-        - ref: [matrix_pinky_bottom]
+        - ref: matrix_pinky_bottom
           shift: [0.5px,-0.5py]
-        - ref: [thumbs_layer_cluster]
+        - ref: thumbs_layer_cluster
           shift: [-0.5px,-0.5py]
-        - ref: [matrix_index_home]
+        - ref: matrix_index_home
           shift: [0.5px,0.5py]
-        - ref: [matrix_pinky_home]
+        - ref: matrix_pinky_home
           shift: [0.5px,0.5py]
     # - what: rectangle
     #   where: [matrix_pinky_bottom]
@@ -129,20 +129,9 @@ outlines:
     #   adjust.shift: [1.5px,0.5py]
       # mcu spot
     - what: rectangle
-      where: [thumbs_space_cluster]
+      where: thumbs_space_cluster
       size: [1.0px+4,1.0py+2]
       adjust.shift: [0px-2,1py]
-    # - what: polygon
-    #   operation: add
-    #   points:
-    #     - ref: [thumbs_space_cluster]
-    #       shift: [0.5px,0.5py]
-    #     - ref: [matrix_inner_bottom]
-    #       shift: [1.5px,0.5py]
-    #     - ref: [matrix_inner_bottom]
-    #       shift: [0.5px,0.5py]
-    #     - ref: [thumbs_space_cluster]
-    #       shift: [-0.5px-2,0.5py]
   combo:
     - name: board
     - operation: subtract
