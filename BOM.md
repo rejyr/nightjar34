@@ -7,6 +7,7 @@
 | hotswap socket | 34 | kalih choc | [(typeractive)](https://typeractive.xyz/products/hotswap-sockets?variant=45742200324327) |
 | power switch | 2 | alps SSSS811101 | [(typeractive)](https://typeractive.xyz/products/power-switch) |
 | reset switch | 2 | panasonic EVQ-PU\[A\|C\|J\|L\]02K | [(typeractive)](https://typeractive.xyz/products/reset-button) |
-| lithium battery | 2 | 3.7v 110mAh 301230 | [(typeractive)](https://typeractive.xyz/products/lithium-battery-110mah?variant=43294731632871) |
+| lithium battery | 2 | 3.7v 110mAh 301230, WHT PH 2.0mm | [(typeractive)](https://typeractive.xyz/products/lithium-battery-110mah?variant=43294731665639) |
+| battery jack | 2 | JST PH 2.0mm | [(typeractive)](https://typeractive.xyz/products/battery-jack) |
 | key switch | 34 | choc v2 | [kalih purple iris silent (amazon)](https://www.amazon.com/YMDK-Profile-Switches-Actuation-Keyboards/dp/B0GHRN82Z5) |
 | keycap | 34 | low profile, mx stem, mx spacing (choc v2) | [ymdk (amazon)](https://www.amazon.com/YMDK-Ultra-Slim-Profile-Mechanical-Keyboard/dp/B0DPQHHF2Z) |

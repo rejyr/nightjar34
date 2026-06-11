@@ -200,6 +200,14 @@ pcbs:
           shift: [0.5kx+4, 0.5ky-0.6]
         params:
           reversible: true
+      battery_connector:
+        what: ceoloide/battery_connector_jst_ph_2
+        where:
+          ref: matrix_ring_bottom
+          shift: [0.0px-4,-0.5px-4]
+          rotate: 90
+        params: 
+          reversible: true
       jlcpcb_order_number_text:
         what: ceoloide/utility_text
         where: matrix_inner_bottom
