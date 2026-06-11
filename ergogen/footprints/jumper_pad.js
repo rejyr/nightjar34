@@ -4,7 +4,6 @@ module.exports = {
     designator: '',
     side: 'F',
     reversible: false,
-    padn_pre: 9,
     P_1_1: { type: 'net', value: 'P_1_1' },
     P_1_2: { type: 'net', value: 'P_1_2' },
     P_2_1: { type: 'net', value: 'P_2_1' },
@@ -15,8 +14,8 @@ module.exports = {
 
     let jumpers = '';
     if (p.reversible) {
-      jumpers = gen_jumper(p, "F", `${p.padn_pre}0`, `${p.padn_pre}1`, p.P_1_1, p.P_1_2)
-      jumpers += gen_jumper(p, "B", `${p.padn_pre}2`, `${p.padn_pre}3`, p.P_2_1, p.P_2_2)
+      jumpers = gen_jumper(p, "F", "11", "12", p.P_1_1, p.P_1_2)
+      jumpers += gen_jumper(p, "B", "21", "22", p.P_2_1, p.P_2_2)
     } else {
       jumpers = gen_jumper(p, p.side, `${p.padn_pre}0`, `${p.padn_pre}1`, p.P_1_1, p.P_1_2)
     }
