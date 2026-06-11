@@ -150,6 +150,8 @@ pcbs:
         params:
           side: "F"
           reversible: true
+          enable_nfc: false
+
           P1: c0
 
           P3: r0
