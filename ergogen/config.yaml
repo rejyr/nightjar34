@@ -150,15 +150,41 @@ pcbs:
         params:
           side: "F"
           reversible: true
-          P1: r0
-          P3: r1
-          P4: r2
-          P5: r3
-          P6: c0
+          P1: c0
+
+          P3: r0
+          P4: r1
+          P5: r2
+          P6: r3
+
           P7: c1
           P8: c2
           P9: c3
           P10: c4
+      jumper_pad_2:
+        what: jumper_pad
+        where:
+          ref: thumbs_space_cluster
+          shift: [0kx-1.5-5.5,1ky+3+5]
+          rotate: 0
+        params:
+          reversible: true
+          P_1_1: c0
+          P_1_2: c0
+          P_2_1: c0
+          P_2_2: GND
+      jumper_pad_gnd:
+        what: jumper_pad
+        where:
+          ref: thumbs_space_cluster
+          shift: [0kx-1.5+5.5,1ky+3+5]
+          rotate: 180
+        params:
+          reversible: true
+          P_1_1: GND
+          P_1_2: GND
+          P_2_1: GND
+          P_2_2: c0
       choc_v2_hotswap:
         what: ceoloide/switch_choc_v1_v2
         where: true 
