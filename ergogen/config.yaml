@@ -200,4 +200,12 @@ pcbs:
           shift: [0.5kx+4, 0.5ky-0.6]
         params:
           reversible: true
+      jlcpcb_order_number_text:
+        what: ceoloide/utility_text
+        where: matrix_inner_bottom
+        params:
+          text: JLCJLCJLCJLC
+          reversible: true
+        adjust:
+          shift: [0,-kx/2-1.5]
 cases:
