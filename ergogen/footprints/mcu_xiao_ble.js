@@ -24,8 +24,8 @@ module.exports = {
         SWCLK: { type: 'net', value: 'SWCLK' },
         SWDIO: { type: 'net', value: 'SWDIO' },
         RST: { type: 'net', value: 'RST' },
-        BAT_POS: { type: 'net', value: 'BAT_POS' },
-        BAT_NEG: { type: 'net', value: 'BAT_NEG' },
+        BAT_P: { type: 'net', value: 'BAT_P' },
+        BAT_N: { type: 'net', value: 'BAT_N' },
         NFC1: { type: 'net', value: 'NFC1' },
         NFC2: { type: 'net', value: 'NFC2' },
     },
@@ -63,8 +63,8 @@ module.exports = {
             (pad "22" thru_hole circle (at 5.707408 8.801408 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.NFC2})
         `;
         const flippable_pads = `
-            (pad "19" thru_hole circle (at -4.445 -0.317 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.BAT_POS})
-            (pad "20" thru_hole circle (at -4.445 -2.222 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.BAT_NEG})
+            (pad "19" thru_hole circle (at -4.445 -0.317 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.BAT_P})
+            (pad "20" thru_hole circle (at -4.445 -2.222 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.BAT_N})
             ${p.enable_nfc ? nfc_pads : ""}
         `;
 
