@@ -106,6 +106,43 @@ outlines:
       where: [matrix_index_top]
       size: [1.5px,2py]
       adjust.shift: [-0.5px,-0.5py]
+      # space for button over inner column
+    - what: rectangle
+      where: [matrix_index_top]
+      size: [2kx,1py]
+      adjust.shift: [0.5px,0py]
+      # close palm gap
+    - what: polygon
+      operation: add
+      points:
+        - ref: [matrix_pinky_bottom]
+          shift: [0.5px,-0.5py]
+        - ref: [thumbs_layer_cluster]
+          shift: [-0.5px,-0.5py]
+        - ref: [matrix_index_home]
+          shift: [0.5px,0.5py]
+        - ref: [matrix_pinky_home]
+          shift: [0.5px,0.5py]
+    # - what: rectangle
+    #   where: [matrix_pinky_bottom]
+    #   size: [4px,2py]
+    #   adjust.shift: [1.5px,0.5py]
+      # mcu spot
+    - what: rectangle
+      where: [thumbs_space_cluster]
+      size: [1.0px+4,1.0py+2]
+      adjust.shift: [0px-2,1py]
+    # - what: polygon
+    #   operation: add
+    #   points:
+    #     - ref: [thumbs_space_cluster]
+    #       shift: [0.5px,0.5py]
+    #     - ref: [matrix_inner_bottom]
+    #       shift: [1.5px,0.5py]
+    #     - ref: [matrix_inner_bottom]
+    #       shift: [0.5px,0.5py]
+    #     - ref: [thumbs_space_cluster]
+    #       shift: [-0.5px-2,0.5py]
   combo:
     - name: board
     - operation: subtract
@@ -118,9 +155,9 @@ pcbs:
       mcu:
         what: mcu_xiao_ble
         where:
-          ref: matrix_middle_top
-          shift: [-2kx-1.5,0ky-6]
-          rotate: 90
+          ref: thumbs_space_cluster
+          shift: [0kx-1.5,1ky+3]
+          rotate: 0
         params:
           side: "F"
           reversible: true
@@ -163,14 +200,15 @@ pcbs:
         what: ceoloide/power_switch_smd_side
         where:
           ref: matrix_inner_top
-          shift: [kx, 0ky]
+          shift: [0kx, 0.5ky+2.4]
+          rotate: 90
         params:
           reversible: true 
       reset_switch:
         what: ceoloide/reset_switch_smd_side
         where:
-          ref: matrix_inner_home
-          shift: [kx, 0ky]
+          ref: matrix_pinky_top
+          shift: [0.5kx+4, 0.5ky-0.6]
         params:
           reversible: true
 cases:
