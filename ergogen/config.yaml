@@ -262,6 +262,10 @@ pcbs:
           reversible: true
         adjust:
           shift: [0,-kx/2-1.5]
+      ground_fill:
+        what: ceoloide/utility_filled_zone
+        params:
+          net: GND
       info_text_1:
         what: ceoloide/utility_text
         where: matrix_middle_bottom
