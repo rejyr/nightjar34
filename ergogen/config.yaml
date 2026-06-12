@@ -152,6 +152,8 @@ pcbs:
           reversible: true
           enable_nfc: false
 
+          GND: GND2
+
           P1: c0
 
           P3: r0
@@ -183,9 +185,9 @@ pcbs:
           rotate: 180
         params:
           reversible: true
-          P_1_1: GND
+          P_1_1: GND2
           P_1_2: c0
-          P_2_1: GND
+          P_2_1: GND2
           P_2_2: GND
       jumper_pad_rst_1:
         what: jumper_pad
@@ -195,7 +197,7 @@ pcbs:
           rotate: 90
         params:
           side: "F"
-          P_1_1: GND
+          P_1_1: GND2
           P_1_2: RST
       jumper_pad_rst_2:
         what: jumper_pad
