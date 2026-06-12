@@ -221,6 +221,8 @@ pcbs:
           rotate: 90
         params:
           reversible: true 
+          from: BAT_P
+          to: BAT_P
       reset_switch:
         what: ceoloide/reset_switch_smd_side
         where:
