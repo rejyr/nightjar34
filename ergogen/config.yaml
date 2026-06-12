@@ -246,4 +246,28 @@ pcbs:
           reversible: true
         adjust:
           shift: [0,-kx/2-1.5]
+      info_text_1:
+        what: ceoloide/utility_text
+        where: matrix_middle_bottom
+        params:
+          text: "nightjar34"
+          width: 4
+          height: 4
+          bold: true
+          italic: true
+          reversible: true
+        adjust:
+          shift: [6,-1py-8]
+      info_text_2:
+        what: ceoloide/utility_text
+        where: matrix_middle_bottom
+        params:
+          text: "@rejyr"
+          width: 2
+          height: 2
+          bold: true
+          italic: true
+          reversible: true
+        adjust:
+          shift: [6+10,-1py-13]
 cases:
