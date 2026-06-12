@@ -161,10 +161,10 @@ pcbs:
           P5: r2
           P6: r3
 
-          P7: c1
-          P8: c2
-          P9: c3
-          P10: c4
+          P7: c4
+          P8: c3
+          P9: c2
+          P10: c1
       jumper_pad_2:
         what: jumper_pad
         where:
