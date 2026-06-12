@@ -17,7 +17,7 @@ module.exports = {
       jumpers = gen_jumper(p, "F", "11", "12", p.P_1_1, p.P_1_2)
       jumpers += gen_jumper(p, "B", "21", "22", p.P_2_1, p.P_2_2)
     } else {
-      jumpers = gen_jumper(p, p.side, `${p.padn_pre}0`, `${p.padn_pre}1`, p.P_1_1, p.P_1_2)
+      jumpers = gen_jumper(p, p.side, "11", "12", p.P_1_1, p.P_1_2)
     }
 
     const standard_opening = `
