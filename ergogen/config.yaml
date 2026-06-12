@@ -238,6 +238,22 @@ pcbs:
           rotate: 90
         params: 
           reversible: true
+      mount_top_left:
+        what: ceoloide/mounting_hole_plated
+        where: matrix_pinky_top
+        adjust.shift: [0.5kx+4, 0.0ky+3]
+      mount_bottom_left:
+        what: ceoloide/mounting_hole_plated
+        where: matrix_pinky_bottom
+        adjust.shift: [0.5kx+4, -0.5ky+2]
+      mount_top_right:
+        what: ceoloide/mounting_hole_plated
+        where: matrix_inner_top
+        adjust.shift: [-0.5kx, 0.5ky-1]
+      mount_bottom_right:
+        what: ceoloide/mounting_hole_plated
+        where: thumbs_space_cluster
+        adjust.shift: [-0.5kx-1, 0.5ky-3]
       jlcpcb_order_number_text:
         what: ceoloide/utility_text
         where: matrix_inner_bottom
