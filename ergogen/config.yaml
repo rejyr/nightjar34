@@ -153,6 +153,7 @@ pcbs:
           enable_nfc: false
 
           GND: GND2
+          BAT_P: BAT_P_1
 
           P1: c0
 
@@ -259,8 +260,8 @@ pcbs:
           rotate: 90
         params:
           reversible: true 
-          from: BAT_P
-          to: BAT_P
+          from: BAT_P_1
+          to: BAT_P_2
       reset_switch:
         what: ceoloide/reset_switch_smd_side
         where:
@@ -276,6 +277,7 @@ pcbs:
           rotate: 90
         params: 
           reversible: true
+          BAT_P: BAT_P_2
       mount_top_left:
         what: ceoloide/mounting_hole_plated
         where: matrix_pinky_top
