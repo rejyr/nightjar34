@@ -53,8 +53,8 @@ module.exports = {
             ${'' /* through hole pads for pads on back */}
             (pad "15" thru_hole circle (at -1.27 -8.572 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.SWCLK})
             (pad "16" thru_hole circle (at 1.27 -8.572 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.SWDIO})
-            (pad "17" thru_hole circle (at -1.27 -6.032 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.GND})
-            (pad "18" thru_hole circle (at 1.27 -6.032 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.RST})
+            (pad "17" thru_hole circle (at -1.27 -6.032 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.RST})
+            (pad "18" thru_hole circle (at 1.27 -6.032 ${p.r}) (size 1.397 1.397) (drill 1.016) (layers "*.Cu" "*.Mask") (remove_unused_layers no)  ${p.GND})
         `;
 
         // through hole pads for pads on back

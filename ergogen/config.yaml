@@ -197,8 +197,8 @@ pcbs:
           shift: [0kx-1.5-3,1ky+3+7.5]
           rotate: 90
         params:
-          side: "F"
-          P_1_1: GND2
+          side: "B"
+          P_1_1: RST
           P_1_2: RST
       jumper_pad_rst_2:
         what: jumper_pad
@@ -207,8 +207,8 @@ pcbs:
           shift: [0kx-1.5+3,1ky+3+7.5]
           rotate: 90
         params:
-          side: "B"
-          P_1_1: RST
+          side: "F"
+          P_1_1: GND2
           P_1_2: RST
       jumper_instructions_text_f:
         what: ceoloide/utility_text
