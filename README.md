@@ -1,9 +1,12 @@
 # nightjar34
 
-todo: all the docs
+docs WIP
+
+![nightjar34 keyboard without a case](./nightjar34_nocase.jpg)
+![nightjar34 pcb view from KiCAD](./nightjar34_kicadpcb.png)
 
 # pcb
-# connecting kicad traces
+## connecting kicad traces
 set `File > Board Setup... > Design Rules > Constraints > Copper to edge clearance:` to `0.25` mm
 
 this removes the `The routing start point violates DRC.` error when routing the xiao ble underside pins
